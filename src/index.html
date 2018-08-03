@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./fonts/iconfont.css">
+    <link rel="stylesheet" href="./css/swiper-4.1.6.min.css">
+    <script src='./js/libs/better-scroll.js'></script>
+    <script src='./js/libs/swiper-4.1.6.min.js'></script>
+    <!-- <script src='./js/libs/flexible.js'></script> -->
+    <script src='./js/libs/zepto.js'></script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="imgs/1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="imgs/2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="imgs/3.jpg" alt=""></div>
+                </div>
+                <div class="swiper-pagination">
+
+                </div>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="手机">
+            </div>
+        </header>
+        <section class="section">
+            <div class="con">
+                <div class="sbox">
+                    <dl>
+                        <dt><img src="./imgs/a.png" alt=""></dt>
+                        <dd>领优惠券</dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="./imgs/a.png" alt=""></dt>
+                        <dd>领优惠券</dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="./imgs/a.png" alt=""></dt>
+                        <dd>领优惠券</dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="./imgs/a.png" alt=""></dt>
+                        <dd>领优惠券</dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="./imgs/a.png" alt=""></dt>
+                        <dd>领优惠券</dd>
+                    </dl>
+                </div>
+                <div class="list">
+                    <p>
+                        <i class="icon iconfont icon-shoucang"></i><b>每日任务</b>
+                    </p>
+                    <div class="center">
+                        <ul>
+
+                            <li>
+
+                                <p class="p1">·每日签到·</p>
+                                <p>·每日签到·</p>
+                            </li>
+                            <li>
+
+                                <p class="p1">·每日签到·</p>
+                                <p>·每日签到·</p>
+                            </li>
+                            <li>
+
+                                <p class="p1">·每日签到·</p>
+                                <p>·每日签到·</p>
+                            </li>
+                            <li>
+
+                                <p class="p1">·每日签到·</p>
+                                <p>·每日签到·</p>
+                            </li>
+                            <li>新人专享</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="bottom">
+                    <p>
+                        <i class="icon iconfont icon-shoucang"></i><b>每日任务</b>
+                    </p>
+                    <ol>
+                        <li>电脑管</li>
+                        <li>图书馆</li>
+                        <li>女装</li>
+                    </ol>
+                </div>
+                <div class="pic">
+                    <img src="imgs/1.jpg" alt="">
+                    <img src="imgs/2.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <ol>
+                <li>
+                    <img src="imgs/a1.png" alt="">
+                    <p>首页</p>
+                </li>
+                <li>
+                    <img src="imgs/a2.png" alt="">
+                    <p>分类</p>
+                </li>
+                <li>
+                    <img src="imgs/a3.png" alt="">
+                    <p>购物车</p>
+                </li>
+                <li>
+                    <img src="imgs/a2.png" alt="">
+                    <p>购物袋</p>
+                </li>
+                <li>
+                    <img src="imgs/a5.png" alt="">
+                    <p>我的</p>
+                </li>
+
+            </ol>
+        </footer>
+
+    </div>
+</body>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        direction: 'horizontal',
+        autoplay: {
+            // delay: 1000,
+            disableOnInteraction: true,
+            stopOnLastSlide: false,
+
+        },
+        pagination: {
+            el: '.swiper-pagination'
+        }
+
+    })
+    var scroll = new BScroll('.section', {
+        scrollX: true,
+        probeType: 2
+    });
+    var w = 0;
+    var ul = document.querySelector('ul');
+    var li = document.querySelectorAll('li');
+    // console.log(li.length);
+    for (var i = 0; i < 10; i++) {
+        w += li[i].offsetWidth;
+        console.log(li[i].offsetWidth)
+    }
+    ul.style.width = w + 'px';
+    var scroll = new BScroll('.center', {
+        scrollX: true,
+        probeType: 2
+    });
+</script>
+
+</html>
